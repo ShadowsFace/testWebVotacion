@@ -7,12 +7,12 @@ Fomulario valida que los datos ingresados sean consistentes, ademas mediante una
 1. Clona el repositorio: `git clone https://github.com/tuusuario/tuproyecto.git`
 2. Configura tu servidor web para que apunte al directorio del proyecto o descarga el codigo y ejecutalo en tu maquina de manera local.
 3. Importa la base de datos desde el archivo `sql/database.sql`.
-4. Asegurate de crear el usuario testWeb en la base de datos, y que su password sea testWeb, ambos iguales y asignarle los permisos necesarios a las tablas contenidas en el archivo sql.
+4. Asegurate de crear el usuario testWeb en la base de datos y que su password sea testWeb, o crear un usuario a tu gusto pero deberas modificar el archivo de conexion para que funcione, deberas asignarle los permisos necesarios a las tablas contenidas en el archivo sql.
 5. Asegúrate de tener PHP y MySQL instalados. (proyecto ejecutado en servidor local WAMP, PHP 8.0.26 y MySQL 8.0.31)
 
 
 ## Estructura del Proyecto
-- **/js:** Archivos JavaScript para la validación y carga de datos.
+- **/js:** Archivos JavaScript para la validación del formulario y carga de datos desde la base de datos a los select.
 - **/sql:** Archivos SQL para configurar la base de datos necesaria para este ejemplo
 - **/** Archivos php para la funcionalidad del proyecto mas index donde se visualiza el formulario
 
@@ -24,11 +24,6 @@ Fomulario valida que los datos ingresados sean consistentes, ademas mediante una
 - Tabla 'regiones': Almacena los datos de las regiones del territorio Chileno
 - Tabla 'comunas': Guarda los datos de las comunas asociadas a cada region por un id_region
 - Tabla 'candidatos': Guarda los datos de los candidatos por los que se puede votar 
-
-## Configuración Adicional
-
-- **/uploads:** Directorio para cargar archivos (si es necesario).
-- **/logs:** Directorio para almacenar registros de errores (si es necesario).
 
 ## Problemas Conocidos
 
