@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Votación</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  
+</head>
+<body>
+
+<div class="container">
+  <form action="procesar_formulario.php" name="form_votacion" id="form_votacion" method="post">
+    <h1 class="mt-5">Formulario de Votación</h1>
+
+    <div class="form-group">
+      <label for="nombre">Nombre y Apellido:</label>
+      <input type="text" class="form-control" id="nombre" name="nombre">
+    </div>
+
+    <div class="form-group">
+      <label for="alias">Alias:</label>
+      <input type="text" class="form-control" id="alias" name="alias">
+    </div>
+
+    <div class="form-group">
+      <label for="rut">Rut:</label>
+      <input type="text" class="form-control" id="rut" name="rut">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="region">Región:</label>
+      <select class="form-control" id="region" name="region">
+        <option value="">Seleccione Región</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="comuna">Comuna:</label>
+      <select class="form-control" id="comuna" name="comuna">
+        <option value="">Seleccione una Comuna</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="candidato">Candidato:</label>
+      <select class="form-control" id="candidato" name="candidato">
+        <option value="">Seleccione un Candidato</option>
+      </select>
+    </div>
+
+    <fieldset class="form-group">
+      <legend>¿Cómo se enteró de nosotros?</legend>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="web" name="fuente[]" value="web">
+        <label class="form-check-label" for="web">Web</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="tv" name="fuente[]" value="tv">
+        <label class="form-check-label" for="tv">TV</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="rrss" name="fuente[]" value="rrss">
+        <label class="form-check-label" for="rrss">Redes Sociales</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="amigos" name="fuente[]" value="amigos">
+        <label class="form-check-label" for="amigos">Amigos</label>
+      </div>
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary" id="btn_enviar" name="btn_enviar">Votar</button>
+  </form>
+</div>
+
+<script src="js/validation.js"></script>
+<script src="js/load_selects.js"></script>
+</body>
+</html>
