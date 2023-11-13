@@ -6,7 +6,7 @@ Fomulario valida que los datos ingresados sean consistentes, ademas mediante una
 
 1. Clona el repositorio: `git clone https://github.com/tuusuario/tuproyecto.git`
 2. Configura tu servidor web para que apunte al directorio del proyecto o descarga el codigo y ejecutalo en tu maquina de manera local.
-3. Importa la base de datos desde el archivo `database.sql`.
+3. Importa la base de datos desde el archivo `sql/database.sql`.
 4. Asegurate de crear el usuario testWeb en la base de datos, y que su password sea testWeb, ambos iguales y asignarle los permisos necesarios a las tablas contenidas en el archivo sql.
 5. Asegúrate de tener PHP y MySQL instalados. (proyecto ejecutado en servidor local WAMP, PHP 8.0.26 y MySQL 8.0.31)
 
