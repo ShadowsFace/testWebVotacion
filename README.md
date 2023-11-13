@@ -1,12 +1,15 @@
 # testWebVotacion
 Test para postulacion a trabajo de desarrollador Web, proyecto consiste en un formulario de votación desarrollado con PHP, JavaScript y MySQL.
+Fomulario valida que los datos ingresados sean consistentes, ademas mediante una consulta a la base de datos, se verifica si el votante ya realizo su voto consultando si su rut ya se encuentra ingresado.
 
 ## Configuración
 
 1. Clona el repositorio: `git clone https://github.com/tuusuario/tuproyecto.git`
-2. Configura tu servidor web para que apunte al directorio del proyecto.
+2. Configura tu servidor web para que apunte al directorio del proyecto o descarga el codigo y ejecutalo en tu maquina de manera local.
 3. Importa la base de datos desde el archivo `database.sql`.
-4. Asegúrate de tener PHP y MySQL instalados.
+4. Asegurate de crear el usuario testWeb en la base de datos, y que su password sea testWeb, ambos iguales y asignarle los permisos necesarios a las tablas contenidas en el archivo sql.
+5. Asegúrate de tener PHP y MySQL instalados. (proyecto ejecutado en servidor local WAMP, PHP 8.0.26 y MySQL 8.0.31)
+
 
 ## Estructura del Proyecto
 - **/js:** Archivos JavaScript para la validación y carga de datos.
@@ -17,7 +20,7 @@ Test para postulacion a trabajo de desarrollador Web, proyecto consiste en un fo
 ## Base de Datos
 
 ### Estructura de la Base de Datos
-- Tabla 'votaciones': Almacena los datos de los votantes
+- Tabla 'votaciones': Almacena los datos de los votantes y su voto por un candidato, ademas de su region y comuna asociadas a las tablas correspondientes. (restriccion de campo rut como unique para evitar votos duplicados)
 - Tabla 'regiones': Almacena los datos de las regiones del territorio Chileno
 - Tabla 'comunas': Guarda los datos de las comunas asociadas a cada region por un id_region
 - Tabla 'candidatos': Guarda los datos de los candidatos por los que se puede votar 
